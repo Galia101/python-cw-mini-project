@@ -13,26 +13,19 @@ def rackets_cost(racket_brand):
     elif racket_brand == "suix":
         return 200
 def padel_balls_cost(ball_boxes):
-    if ball_boxes == "one":
+    if ball_boxes == 1:
         return 2
-    elif ball_boxes == "two":
+    elif ball_boxes == 2:
         return 3.5
-    elif ball_boxes == "three":
+    elif ball_boxes == 3:
         return 5
     
 def padel_game_cost():
-    court_type= input("your preferad courtype:")
-    racket_brand= input("your prefered racket brand")
-    ball_boxes= input(int("number of ball boxes you need:"))
+    court_type= input("Enter cour type: ")
+    racket_brand= input("Enter racket brand: ")
+    ball_boxes= input(int("Enter number of ball boxes: "))
 
     total_cost= padel_court_cost(court_type) + rackets_cost(racket_brand) + padel_balls_cost(ball_boxes)
     return total_cost
 
-padel_court_cost("court_type")
-rackets_cost("rackets_cost")
-padel_balls_cost("boll_boxes")
-print("padel_game_cost")
-
-court_type: ("indoor")
-racket_brand:("nox")
-ball_boxes: 2
+print(f"total cost{padel_game_cost()}")
